@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 14px;
+}
+
+.container {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:  hsl(0, 0%, 100%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+.box-1 {
+    background: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    position: relative;
+    mix-blend-mode: darken;
+}
+
+.box-1::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsl(212, 21%, 14%);
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+}
+
+.box-2 h1 {
+    line-height: 1;
+    font-family: 'Fraunces', serif;
+    font-size: 33px;
+}
+
+.box-2 {
+    padding: 10%;
+
+}
+
+
+.prg-1 {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 4.3px;
+    font-size: 13px;
+}
+
+
+.prg-2 {
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    color: #6c7289;
+
+}
+
+.box-2 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 245px;
+    height: 50px;
+    border-radius: 9px;
+    background-color: #3c8067;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s ;
+}
+
+.box-2 button:hover {
+    background-color: hsl(158, 36%, 24%)
+
+}
+
+.box-2 button img {
+    margin-right: 10px;
+}
+
+
+.pricebox {
+    display: flex;
+    align-items: center;
+    color: hsl(228, 12%, 48%);
+}
+
+
+.newp {
+    color: #3c8067;
+    font-family: 'Fraunces', serif;
+    font-size: 33px;
+    font-weight: bold;
+    margin-right: 20px
+}
+
+.oldp {
+    text-decoration: line-through
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+
+    body {
+        height: 100%;
+    } 
+
+    .container {
+        max-width: 360px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 1fr;
+    }
+
+    .container {
+    margin: 16px;
+    }
+    
+    .box-1 {
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+    }
+
+    .box-2 {
+        padding: 6%;
+    }
+
+    .box-2 button {
+        width: 100%;
+    }
+    .newp {
+        margin-top: 23px;
+    }
+}
